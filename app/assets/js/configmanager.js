@@ -87,7 +87,8 @@ const DEFAULT_CONFIG = {
         launcher: {
             allowPrerelease: false,
             dataDirectory: dataPath,
-            discordRPC: true
+            discordRPC: true,
+            launcherScale: 1.0
         }
     },
     newsCache: {
@@ -810,4 +811,13 @@ exports.getDiscordRPC = function (def = false) {
  */
 exports.setDiscordRPC = function (discordRPC) {
     config.settings.launcher.discordRPC = discordRPC
+}
+
+exports.getLauncherScale = function (def = false) {
+    if (!config) return DEFAULT_CONFIG.settings.launcher.launcherScale
+    return !def ? config.settings.launcher.launcherScale : DEFAULT_CONFIG.settings.launcher.launcherScale
+}
+
+exports.setLauncherScale = function (launcherScale) {
+    config.settings.launcher.launcherScale = launcherScale
 }

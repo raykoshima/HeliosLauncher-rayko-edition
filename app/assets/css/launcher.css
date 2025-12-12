@@ -186,7 +186,24 @@ body, button {
 #frameButtonDarwin_close:active {
     background-color: #ff8d7b;
 }
-
+#launch_button:hover {
+    background-color: #5bb35d;
+}
+#launch_button:active {
+    background-color: #448946;
+}
+#launch_button.killOption {
+    background-color: #C0392B !important;
+}
+#launch_button.killOption:hover {
+    background-color: #E74C3C !important;
+}
+#launch_button.killOption:active {
+    background-color: #922B21 !important;
+}
+#launch_details_box {
+    background: rgba(0, 0, 0, 0.5);
+}
 #frameButtonDarwin_minimize {
     background-color: #fed045;
 }

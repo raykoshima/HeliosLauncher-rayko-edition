@@ -131,7 +131,7 @@ continueButton = "CONTINUE"
 
 
 [js.discord]
-waiting = "Waiting for Client.."
+waiting = "Opening Game.."
 state = "Server: {shortId}"
 
 [js.index]
@@ -157,6 +157,8 @@ pleaseWait = "Please wait.."
 failureTitle = "Error During Launch"
 failureText = "See console (CTRL + Shift + i) for more details."
 okay = "Okay"
+kill = "KILL"
+launchButton = "PLAY"
 
 [js.landing.selectedAccount]
 noAccountSelected = "No Account Selected"
@@ -211,7 +213,7 @@ checkConsoleForDetails = "Please check the console (CTRL + Shift + i) for more d
 checking = "Checking for News"
 
 [js.landing.discord]
-loading = "Loading game.."
+loading = "Loading Resources.."
 joining = "Sailing to Westeros!"
 joined = "Exploring the Realm!"
 

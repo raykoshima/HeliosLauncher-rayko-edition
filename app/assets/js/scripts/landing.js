@@ -101,6 +101,10 @@ function setLaunchEnabled(val) {
 // Bind launch button
 document.getElementById('launch_button').addEventListener('click', async e => {
     loggerLanding.info('Launching game..')
+    if (proc != null) {
+        proc.kill()
+        return
+    }
     try {
         const server = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer())
         const jExe = ConfigManager.getJavaExecutable(ConfigManager.getSelectedServer())
@@ -611,6 +615,16 @@ async function dlAsync(login = true) {
             // Bind listeners to stdout.
             proc.stdout.on('data', tempListener)
             proc.stderr.on('data', gameErrorListener)
+
+            setLaunchEnabled(true)
+            document.getElementById('launch_button').innerHTML = Lang.queryJS('landing.launch.kill')
+            document.getElementById('launch_button').classList.add('killOption')
+
+            proc.on('close', (code, signal) => {
+                document.getElementById('launch_button').innerHTML = Lang.queryJS('landing.launch.launchButton')
+                document.getElementById('launch_button').classList.remove('killOption')
+                proc = null
+            })
 
             setLaunchDetails(Lang.queryJS('landing.dlAsync.doneEnjoyServer'))
 
