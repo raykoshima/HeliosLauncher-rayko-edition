@@ -76,7 +76,7 @@ tabModsHeaderDesc = "Enable or disable mods."
 switchServerButton = "Switch"
 requiredMods = "Required Mods"
 optionalMods = "Optional Mods"
-dropinMods = "Drop-in Mods"
+dropinMods = "Drop-in Mods AKA Mods in the game folder (fabric mod If sinytra connector is present)"
 addMods = "Add Mods"
 dropinRefreshNote = "(F5 to Refresh)"
 shaderpacks = "Shaderpacks"
@@ -108,7 +108,8 @@ dataDirectoryDesc = "All game files and local Java installations will be stored 
 aboutTabHeaderText = "About"
 aboutTabHeaderDesc = "View information and release notes for the current version."
 aboutTitle = "{appName}"
-stableRelease = "Stable Release"
+stableRelease = "Alpha Release"
+alphaRelease = "Alpha Release"
 versionText = "Version "
 sourceGithub = "Source (GitHub)"
 support = "Support"
@@ -269,7 +270,8 @@ availableOptions = "Available Options for Java {major} (HotSpot VM)"
 
 [js.settings.about]
 preReleaseTitle = "Pre-release"
-stableReleaseTitle = "Stable Release"
+stableReleaseTitle = "Alpha Release"
+alphaReleaseTitle = "Alpha Release"
 releaseNotesFailed = "Failed to load release notes."
 
 [js.settings.updates]

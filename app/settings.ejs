@@ -75,7 +75,6 @@
                 </div>
 
                 <div class="settingsCurrentAccounts" id="settingsCurrentMojangAccounts">
-                    <!-- Mojang auth accounts populated here. -->
                 </div>
             </div>
         </div>
@@ -143,12 +142,21 @@
                 </div>
             </div>
             <div id="settingsModsContainer">
-                <div id="settingsReqModsContainer">
-                    <div class="settingsModsHeader"><%- lang('settings.requiredMods') %></div>
-                    <div id="settingsReqModsContent">
+                <div id="settingsShadersContainer">
+                    <div class="settingsModsHeader"><%- lang('settings.shaderpacks') %></div>
+                    <div id="settingsShaderpackDesc"><%- lang('settings.shaderpackDesc') %></div>
+                    <div id="settingsShaderpackWrapper">
+                        <button id="settingsShaderpackButton"> + </button>
+                        <div class="settingsSelectContainer">
+                            <div class="settingsSelectSelected" id="settingsShadersSelected"><%-
+                                    lang('settings.selectShaderpack') %></div>
+                            <div class="settingsSelectOptions" id="settingsShadersOptions" hidden>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <br>
                 <div id="settingsOptModsContainer">
                     <div class="settingsModsHeader"><%- lang('settings.optionalMods') %></div>
                     <div id="settingsOptModsContent">
@@ -163,18 +171,10 @@
 
                     </div>
                 </div>
-                <div id="settingsShadersContainer">
-                    <div class="settingsModsHeader"><%- lang('settings.shaderpacks') %></div>
-                    <div id="settingsShaderpackDesc"><%- lang('settings.shaderpackDesc') %></div>
-                    <div id="settingsShaderpackWrapper">
-                        <button id="settingsShaderpackButton"> + </button>
-                        <div class="settingsSelectContainer">
-                            <div class="settingsSelectSelected" id="settingsShadersSelected"><%-
-                                    lang('settings.selectShaderpack') %></div>
-                            <div class="settingsSelectOptions" id="settingsShadersOptions" hidden>
+                <div id="settingsReqModsContainer">
+                    <div class="settingsModsHeader"><%- lang('settings.requiredMods') %></div>
+                    <div id="settingsReqModsContent">
 
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -392,10 +392,10 @@
                     <div id="settingsAboutCurrentVersion">
                         <div id="settingsAboutCurrentVersionCheck">&#10003;</div>
                         <div id="settingsAboutCurrentVersionDetails">
-                            <span id="settingsAboutCurrentVersionTitle"><%- lang('settings.stableRelease') %></span>
+                            <span id="settingsAboutCurrentVersionTitle"><%- lang('settings.alphaRelease') %></span>
                             <div id="settingsAboutCurrentVersionLine">
                                 <span id="settingsAboutCurrentVersionText"><%- lang('settings.versionText') %></span>
-                                <span id="settingsAboutCurrentVersionValue">0.0.1-alpha.18</span>
+                                <span id="settingsAboutCurrentVersionValue">1.0.0</span>
                             </div>
                         </div>
                     </div>
@@ -404,14 +404,15 @@
                     <a href="<%- lang('settings.sourceGithubLink') %>" id="settingsAboutSourceButton"
                         class="settingsAboutButton"><%- lang('settings.sourceGithub') %></a>
                     <!-- The following must be included in third-party usage. -->
-                    <!-- <a href="https://github.com/dscalzi/HeliosLauncher" id="settingsAboutSourceButton" class="settingsAboutButton">Original Source</a> -->
+                    <a href="https://github.com/dscalzi/HeliosLauncher" id="settingsAboutSourceButton"
+                        class="settingsAboutButton">Original Source</a>
                     <a href="<%- lang('settings.supportLink') %>" id="settingsAboutSupportButton"
                         class="settingsAboutButton"><%- lang('settings.support') %></a>
                     <a href="#" id="settingsAboutDevToolsButton" class="settingsAboutButton"><%-
                             lang('settings.devToolsConsole') %></a>
                 </div>
             </div>
-            <div class="settingsChangelogContainer">
+            <!-- <div class="settingsChangelogContainer">
                 <div class="settingsChangelogContent">
                     <div class="settingsChangelogHeadline">
                         <div class="settingsChangelogLabel"><%- lang('settings.releaseNotes') %></div>
@@ -425,7 +426,7 @@
                     <a class="settingsChangelogButton settingsAboutButton" href="#"><%-
                             lang('settings.viewReleaseNotes') %></a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div id="settingsTabUpdate" class="settingsTab" style="display: none;">
             <div class="settingsTabHeader">
@@ -435,12 +436,12 @@
             <div id="settingsUpdateStatusContainer">
                 <div id="settingsUpdateStatusContent">
                     <div id="settingsUpdateStatusHeadline">
-                        <span id="settingsUpdateTitle"><!-- You Are Running the Latest Version --></span>
+                        <span id="settingsUpdateTitle"></span>
                     </div>
                     <div id="settingsUpdateVersion">
                         <div id="settingsUpdateVersionCheck">&#10003;</div>
                         <div id="settingsUpdateVersionDetails">
-                            <span id="settingsUpdateVersionTitle"><%- lang('settings.stableRelease') %></span>
+                            <span id="settingsUpdateVersionTitle"><%- lang('settings.alphaRelease') %></span>
                             <div id="settingsUpdateVersionLine">
                                 <span id="settingsUpdateVersionText"><%- lang('settings.versionText') %> </span>
                                 <span id="settingsUpdateVersionValue">0.0.1-alpha.18</span>

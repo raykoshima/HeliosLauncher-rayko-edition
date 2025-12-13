@@ -1083,13 +1083,14 @@ async function loadSelectedServerOnModsTab() {
                     <div class="serverListingVersion">${serv.rawServer.minecraftVersion}</div>
                     <div class="serverListingRevision">${serv.rawServer.version}</div>
                     ${serv.rawServer.mainServer ? `<div class="serverListingStarWrapper">
-                        <svg id="Layer_1" viewBox="0 0 107.45 104.74" width="20px" height="20px">
-                            <defs>
-                                <style>.cls-1{fill:#fff;}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}</style>
-                            </defs>
-                            <path class="cls-1" d="M100.93,65.54C89,62,68.18,55.65,63.54,52.13c2.7-5.23,18.8-19.2,28-27.55C81.36,31.74,63.74,43.87,58.09,45.3c-2.41-5.37-3.61-26.52-4.37-39-.77,12.46-2,33.64-4.36,39-5.7-1.46-23.3-13.57-33.49-20.72,9.26,8.37,25.39,22.36,28,27.55C39.21,55.68,18.47,62,6.52,65.55c12.32-2,33.63-6.06,39.34-4.9-.16,5.87-8.41,26.16-13.11,37.69,6.1-10.89,16.52-30.16,21-33.9,4.5,3.79,14.93,23.09,21,34C70,86.84,61.73,66.48,61.59,60.65,67.36,59.49,88.64,63.52,100.93,65.54Z"/>
-                            <circle class="cls-2" cx="53.73" cy="53.9" r="38"/>
-                        </svg>
+                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+	<defs>
+		<image  width="16" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAbBQTFRFAAAAb5OucJOvbpKsd5irdpOnXW2CcZOzdZawjaa4jqCxZ3eMXWyCXGx+cZOzkKbCyNHY0NfdjqC2Xm2EXm2DcZO0qbjY4+fP6ezLqbXLX22GX22HbJKobpKrcpO1i6HFwcfr7u/Z8fPNwcrehJewZHOLX22FYG2IcZOydZavjqW/q7nbw8ju1NX58PDe8vTP0NXrv8fhqbLOipq2c4GhY26QfJbOf5nDiqLBu8bZ2d3d5+fr6ent7+yy7Oma4+HG7u/a6evbvsbclaLEeYaqZG6RfZbShZzMmavN09jm6+3V8/Pe8fHh6+OJ5dtr5OG47e/T4ebPwMjdmafGeomoYW6NeZXGe5a+kqHBrrbWyszw0dH85uDQ6OLGxcvut8Dfj5+/ipu6c4KdYG2JZ2+ZZG6UZG6Ri5nBycny8fDn7u/fuMHiiZy2ZXONYm6MYW2KaW+eZ2+ZZW+TaXSZsbTg6+zk4ubTkaDCZXOPY3CLYm6OYm6NYm6MkJzCy87tztDskJ3HZm+XZm+YYW6MeIKspKjcq67kgobDbXGnbXGnbHGliIvOi47RcXKzcHKycHKvWca27AAAAJB0Uk5TAFxrSMLRUinC///WLgXM/////+YazP/////mGinMzPX/////+tHMUkjC/////////////9FrPaP////////////////We2vR////////////////4Y9S1v/////////////gei7m5vr//////OjmXAUaGtH/////6DEaCsz/////5hpS0f//4FwKa9bhenuP9/GAPQAAAGlJREFUeJxjZIAARsZ/UAaEYmZkZPyFJMDOCAaf4QJ8EIE3cAFRiMBTiIAMIwLcBApoMCKD04xmjGjADV2AIQyFOxdoaAoSfyLIlgIkgVaoO2og3Dq4w5ohAuUIz3UBucXIvmXoYyyEMACt5A6r1B1j4wAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer 2" href="#img1" x="2" y="2"/>
+</svg>
                         <span class="serverListingStarTooltip">${Lang.queryJS('settings.serverListing.mainServer')}</span>
                     </div>` : ''}
                 </div>
