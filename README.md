@@ -207,5 +207,5 @@ The best way to contact the developers is on Discord.
 [chromedebugger]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 'Debugger for Chrome'
 [discord]: https://discord.gg/zNWUXdt 'Discord'
 [wiki]: https://github.com/raykoshima/WetCat-Launcher/wiki 'wiki'
-[nebula]: https://github.com/raykoshima/Nebula 'raykoshima/Nebula'
+[nebula]: https://github.com/dscalzi/Nebula 'dscalzi/Nebula'
 [v2branch]: https://github.com/raykoshima/WetCat-Launcher/tree/ts-refactor 'v2 branch'
