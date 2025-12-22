@@ -273,11 +273,11 @@ const refreshServerStatus = async (fade = false) => {
 
 }
 
-refreshMojangStatuses()
+// refreshMojangStatuses()
 // Server Status is refreshed in uibinder.js on distributionIndexDone.
 
 // Refresh statuses every hour. The status page itself refreshes every day so...
-let mojangStatusListener = setInterval(() => refreshMojangStatuses(true), 60 * 60 * 1000)
+// let mojangStatusListener = setInterval(() => refreshMojangStatuses(true), 60 * 60 * 1000)
 // Set refresh rate to once every 5 minutes.
 let serverStatusListener = setInterval(() => refreshServerStatus(true), 300000)
 
@@ -721,23 +721,26 @@ function slide_(up) {
 }
 
 // Bind news button.
-document.getElementById('newsButton').onclick = () => {
-    // Toggle tabbing.
-    if (newsActive) {
-        $('#landingContainer *').removeAttr('tabindex')
-        $('#newsContainer *').attr('tabindex', '-1')
-    } else {
-        $('#landingContainer *').attr('tabindex', '-1')
-        $('#newsContainer, #newsContainer *, #lower, #lower #center *').removeAttr('tabindex')
-        if (newsAlertShown) {
-            $('#newsButtonAlert').fadeOut(2000)
-            newsAlertShown = false
-            ConfigManager.setNewsCacheDismissed(true)
-            ConfigManager.save()
+// Bind news button.
+if (document.getElementById('newsButton')) {
+    document.getElementById('newsButton').onclick = () => {
+        // Toggle tabbing.
+        if (newsActive) {
+            $('#landingContainer *').removeAttr('tabindex')
+            $('#newsContainer *').attr('tabindex', '-1')
+        } else {
+            $('#landingContainer *').attr('tabindex', '-1')
+            $('#newsContainer, #newsContainer *, #lower, #lower #center *').removeAttr('tabindex')
+            if (newsAlertShown) {
+                $('#newsButtonAlert').fadeOut(2000)
+                newsAlertShown = false
+                ConfigManager.setNewsCacheDismissed(true)
+                ConfigManager.save()
+            }
         }
+        slide_(!newsActive)
+        newsActive = !newsActive
     }
-    slide_(!newsActive)
-    newsActive = !newsActive
 }
 
 // Array to store article meta.

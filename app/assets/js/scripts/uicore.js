@@ -11,6 +11,7 @@ const remote = require('@electron/remote')
 const isDev = require('./assets/js/isdev')
 const { LoggerUtil } = require('helios-core')
 const Lang = require('./assets/js/langloader')
+const { MSFT_OPCODE, MSFT_REPLY_TYPE, MSFT_ERROR } = require('./assets/js/ipcconstants')
 
 const loggerUICore = LoggerUtil.getLogger('UICore')
 const loggerAutoUpdater = LoggerUtil.getLogger('AutoUpdater')
